@@ -3,9 +3,7 @@
 {% block title %}Forbidden{% endblock title %}
 
 {% block content %}
-<div class="container">
-    <h1>Forbidden action</h1>
-    <p>You don't have the rights to view this page.</p>
-    <p><a href="{% url 'list' %}">Click here</a> to go back to posts.</p>
-</div>
+<h1>Forbidden action</h1>
+<p>You don't have the rights to view this page.</p>
+<p><a href="{% url 'list' %}">Click here</a> to go back to posts.</p>
 {% endblock content %}

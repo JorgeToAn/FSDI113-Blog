@@ -1,0 +1,14 @@
+/* NAVBAR */
+.navbar {
+    background-color: #c4007a !important;
+}
+
+
+/* UTILITY */
+div.blank {
+    height: 5vh;
+}
+
+.page-subtitle {
+    color: #c4007a;
+}

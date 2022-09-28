@@ -3,20 +3,18 @@
 {% block title %}Delete Post{% endblock title %}
 
 {% block content %}
-<div class="container">
-    <h1>Delete Post</h1>
-    <p>Are you sure you want to delete "{{ post.title }}"?</p>
-    <p><small>You won't be able to recover it!</small></p>
-    <form method="post">
-        {% csrf_token %}
-        <div class="row">
-            <div class="col-auto">
-                <input type="submit" value="Confirm" class="btn btn-danger">
-            </div>
-            <div class="col-auto">
-                <a href="{% url 'detail' post.id %}" class="btn btn-primary">Cancel</a>
-            </div>
+<h1>Delete Post</h1>
+<p>Are you sure you want to delete "{{ post.title }}"?</p>
+<p><small>You won't be able to recover it!</small></p>
+<form method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-auto">
+            <input type="submit" value="Confirm" class="btn btn-danger">
         </div>
-    </form>
-</div>
+        <div class="col-auto">
+            <a href="{% url 'detail' post.id %}" class="btn btn-primary">Cancel</a>
+        </div>
+    </div>
+</form>
 {% endblock content %}

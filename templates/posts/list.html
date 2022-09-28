@@ -3,22 +3,18 @@
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
-<div class="container">
-  <h1>Posts</h1>
-
-  {% for post in post_list %}
-  <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
-        <p class="card-text">{{ post.body }}</p>
-        <a href="{% url 'detail' post.id %}" class="card-link">Read more</a>
-        {% if user.is_authenticated and post.author == user %}
-        <a href="{% url 'edit' post.id %}" class="card-link">Edit</a>
-        <a href="{% url 'delete' post.id %}" class="card-link" style="color: #f84444;">Delete</a>
-        {% endif %}
-      </div>
-  </div>
-  {% endfor %}
+<h1>Posts</h1>
+<div class="blank"></div>
+{% for post in post_list %}
+<div class="card mb-2" style="width: 100%;">
+    <div class="card-body">
+      <h5 class="card-title">{{ post.title }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ post.subtitle }}</h6>
+      <p class="card-text">{{ post.body }}</p>
+      <a href="{% url 'detail' post.id %}" class="card-link">Read more</a>
+      <a href="{% url 'edit' post.id %}" class="card-link">Edit</a>
+      <a href="{% url 'delete' post.id %}" class="card-link" style="color: #f84444;">Delete</a>
+    </div>
 </div>
+{% endfor %}
 {% endblock content %}
