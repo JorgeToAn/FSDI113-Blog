@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
+h1, .card-title, .navbar-brand {
+    font-family: 'Abyssinica SIL', serif;
+}
+
+
+
 /* NAVBAR */
 .navbar {
     background-color: #c4007a !important;
@@ -6,9 +14,10 @@
 
 /* UTILITY */
 div.blank {
-    height: 5vh;
+    height: 15px;
 }
 
 .page-subtitle {
     color: #c4007a;
+    margin: 0;
 }
