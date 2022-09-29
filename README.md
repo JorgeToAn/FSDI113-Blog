@@ -3,6 +3,7 @@ This project presents a page based off a local newspaper. It has a home page, an
 
 ## Heroku
 https://frozen-basin-93332.herokuapp.com/
+https://git.heroku.com/frozen-basin-93332.git
 
 # Mini challenge 1
 
