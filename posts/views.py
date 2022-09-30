@@ -5,6 +5,10 @@ from django.urls import reverse_lazy
 from posts.models import Post, Status
 
 
+# class PostContext(ListView):
+#     pass
+
+
 class PostListView(ListView):
     template_name: str = "posts/list.html"
     model = Post

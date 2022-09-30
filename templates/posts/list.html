@@ -13,7 +13,7 @@
       <h6 class="card-subtitle mb-2 text-muted">{{ post.author }} - {{ post.created_on }} - <span class="text-capitalize">{{ post.status }}</span></h6>
       <p class="card-text">{{ post.body }}</p>
       <a href="{% url 'detail' post.id %}" class="card-link">Read more</a>
-      {% if user.is_authenticated and post.author == user %}
+      {% if post.author == user %}
       <a href="{% url 'edit' post.id %}" class="card-link">Edit</a>
       <a href="{% url 'delete' post.id %}" class="card-link" style="color: #f84444;">Delete</a>
       {% endif %}
